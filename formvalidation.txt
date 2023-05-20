@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var Phone no= document.forms["myForm"]["Phone no"].value;
+            var password = document.forms["myForm"]["password"].value;
+            var Confirm password=document.forms["myForm"]["Confirm password "].value; 
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            if (Phone no==""){
+               alert ("Phone no must be filled out");
+               return false;
+            }
+
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            if (Confirm Password==""){
+                alert("Confirm password must be filled out");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="Phone no">Phone no:</label>
+        <input type="Phone no" id="Phone no" name= "Phone no"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="Confirm password"> Confirm Password:</label>
+        <input type="Confirm password" id="Confirm password" name="Confirm password"><br><br>
+
+
+        <input type="submit" value="Submit">
+    </form>
+
